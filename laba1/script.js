@@ -6,11 +6,13 @@ let p = document.createElement('p');
 let body = document.querySelector('body');
 
 let buttonAdd = document.querySelector('#add').onclick = function() {
+    if (input.value){
     p = body.appendChild(p);
     p.innerText += ' ' + input.value;
     arr.push(+input.value);
     console.log(arr);
     input.value = '';
+    }
 }
 
 let buttonSort = document.querySelector('#sort').onclick = function() {
