@@ -16,6 +16,7 @@ let buttonAdd = document.querySelector('#add').onclick = function() {
 }
 
 let buttonSort = document.querySelector('#sort').onclick = function() {
+    if (arr[0]){
     let h1 = document.createElement('h2');
     h1 = body.appendChild(h1);
     h1.innerText += ' Before sorting: '  + arr.join(' ');
@@ -27,7 +28,8 @@ let buttonSort = document.querySelector('#sort').onclick = function() {
     h2.innerText +=  ' After sorting: '  + arr.join(' ');
     h3.innerText += ` min = ${arr[0]} \n max = ${arr[arr.length -1]} \n sum = ${sum(arr)}\n`;
     arr = [];
-    p.innerText = ''; 
+    p.innerText = '';
+    } 
     } 
 
 function sort(arr) {
